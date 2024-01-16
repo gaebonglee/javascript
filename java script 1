@@ -1,0 +1,207 @@
+var x = 5;
+var y = 3;
+var z = x + y;
+console.log(x + y); //8
+
+var x = 10;
+var y = 5;
+var z = x - y;
+console.log(x - y); //5
+
+var x = 2;
+var y = 5;
+var z = x * y;
+console.log(x * y); //10
+
+var x = 5;
+var y = 2;
+var z = x / y;
+console.log(x / y); //2.5
+
+var x = 15;
+var y = 4;
+var z = x % y;
+console.log(x % y); //3
+
+var x = 5;
+var y = ++x;
+console.log(y); //6
+
+var x = 5;
+var y = --x;
+console.log(y); //4
+
+var str1 = "자바스크립트";
+var str2 = "첫 번째 실습";
+var str3 = console.log(str1 + str2); //"자바스크립트첫 번째 실습"
+
+var x = "Hello";
+var y = 123;
+var z = console.log(x + y); //"Hello123"
+
+var str1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var str2 = console.log(str1.length); //26
+
+var str1 = "Hello, Java";
+var str2 = str1.replace("Java", "JavaScript");
+console.log(str2); // "Hello, javaScript"
+
+console.log("hello, javascript!".toUpperCase());
+//"HELLO, JAVASCRIPT!"
+
+console.log("HELLO, JAVASCRIPT!".toLowerCase());
+//"hello, javascript!"
+
+var str = "a,b,c,d,e,f";
+var sub = str.split("");
+console.log(sub[2]); //b
+
+//14번
+var x = 32;
+document.write("x=");
+document.write(x, "<br>");
+
+var x = 32;
+var total = 100 + (x * 2) / 4 - 3;
+document.write("100 + x*2/4 - 3 = ");
+document.write(100 + (x * 2) / 4 - 3, "<br>");
+
+var x = 32;
+document.write("x/10 = ");
+document.write(x / 10, "<br>");
+
+var x = 32;
+document.write("x%2 = ");
+document.write(x % 2);
+
+//15번
+
+document.write("x=3, y=3, z=3", "<br><br>");
+
+var x = 3;
+document.write("x += 3 실행 후, x=");
+document.write((x += 3), "<br>");
+
+var y = 3;
+document.write("y *= 3 실행 후, y=");
+document.write((y *= 3), "<br>");
+
+var z = 3;
+document.write("z %= 2 실행 후, z=");
+document.write((z %= 2), "<br>");
+
+//16번
+var x = 13;
+var y = 7;
+
+document.write("x=13, y=7", "<br><br>");
+
+var x = 13;
+var y = 7;
+document.write("x == y : ");
+document.write(x == y, "<br>");
+
+var x = 13;
+var y = 7;
+document.write("x != y : ");
+document.write(x != y, "<br>");
+
+var x = 13;
+var y = 7;
+document.write("x >= y : ");
+document.write(x >= y, "<br>");
+
+var x = 13;
+var y = 7;
+document.write("x > y : ");
+document.write(x > y, "<br>");
+
+var x = 13;
+var y = 7;
+document.write("x <= y : ");
+document.write(x <= y, "<br>");
+
+var x = 13;
+var y = 7;
+document.write("x < y : ");
+document.write(x < y, "<br>");
+
+//17번
+
+document.write("x=true, y=flase", "<br><br>");
+
+var x = true;
+var y = false;
+document.write("x && y : ");
+document.write(x && y, "<br>");
+
+var x = true;
+var y = false;
+document.write("x || y : ");
+document.write(x || y, "<br>");
+
+var x = true;
+var y = false;
+document.write("!x : ");
+document.write(!x, "<br>");
+
+var x = true;
+var y = false;
+document.write("(3>2) && (3<4) : ");
+document.write(3 > 2 && 3 < 4, "<br>");
+
+var x = true;
+var y = false;
+document.write("(3==-2) || (-1< 0) : ");
+document.write(3 == -2 || -1 < 0, "<br>");
+
+//18번
+
+document.write("a=3, b=5", "<br><br>");
+
+var a = 3;
+var b = 5;
+document.write("두수의 차이 : ");
+document.write(b - a);
+
+//19번
+var x = "abc";
+var y = 23;
+document.write(x + y, "<br>");
+
+var x = 23;
+var y = "abc";
+document.write(x + y, "<br>");
+
+var x = 23;
+var y = "35";
+document.write(x + y, "<br>");
+
+var x = 23;
+var y = 35;
+document.write(x + y, "<br>");
+
+var x = 23;
+var y = 35;
+var z = "abc";
+document.write(x + y + z, "<br>");
+
+var x = "abc";
+var y = "23";
+var z = "35";
+document.write(x + y + z, "<br>");
+
+//20번
+var a = "Boys and Girls";
+var b = "!!";
+
+document.write("a : Boys and Girls", "<br>");
+document.write("b : !!", "<br><br>");
+
+document.write(a.charAt(9), "<br>");
+//concat()함수이용
+document.write(a + b.concat(입니다), "<br>");
+//20-2모르겠음
+document.write(a.slice(5, 8), "<br>");
+document.write(a.toUpperCase(), "<br>");
+document.write(a.replace("and", "or"), "<br>");
