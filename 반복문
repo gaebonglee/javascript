@@ -1,0 +1,183 @@
+<script>
+    // 1부터 100까지 홀수만 출력
+    // i += 2 -> i = i + 2
+    for (let i = 1; i <= 100; i += 2) {
+      document.write(i + " "); // 1 3 5 ... 99
+    }
+  </script>
+
+<script>
+    let num = parseInt(prompt("1 이상의 정수를 입력하세요")); // 10
+
+    document.write("입력한 수 : ", num, "<br>");
+    document.write(num, "의 약수 : ");
+
+    for (let i = 1; i <= num; i++) {
+      if (num % i == 0) {
+        document.write(i + " ");
+      }
+    }
+  </script>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>n</th>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <th>n<sup>2</th>
+        <td>0</td>
+        <td>1</td>
+        <td>4</td>
+        <td>9</td>
+        <td>16</td>
+        <td>25</td>
+        <td>36</td>
+        <td>49</td>
+        <td>64</td>
+        <td>81</td>
+    </tr>
+    </table>
+
+    <style>
+        table,
+        th,
+        td {
+          border: 1px solid black;
+        }
+      </style>
+    </head>
+    <body>
+      <h3>document.write()로 표만들기</h3>
+      <hr />
+  
+      <script>
+        document.write("<table><tr>");
+        document.write("<th>n</th>");
+  
+        for (let i = 0; i < 10; i++) {
+          document.write("<td>"); // <td>9</td>
+          document.write(i);
+          document.write("</td>");
+        }
+  
+        document.write("</tr><tr>");
+        document.write("<th>");
+        document.write("n<sup>2");
+        document.write("</th>");
+  
+        for (let j = 0; j < 10; j++) {
+          document.write("<td>");
+          document.write(j * j);
+          document.write("</td>");
+        }
+  
+        document.write("</tr></table>");
+      </script>
+
+<script>
+    let input = prompt("원하는 단을 입력하세요.");
+    input = parseInt(input);
+
+    /*
+    for (let i = 1; i <= 9; i++) {
+      document.write(input + " x " + i + " = " + input * i + "<br>");
+    }
+    */
+
+    for (let i = 1; i <= 9; i++) {
+      for (let j = 1; j <= 9; j++) {
+        document.write(i + " x " + j + " = " + i * j + "<br>");
+      }
+      document.write("<br>");
+    }
+  </script>
+
+<h3>암호를 입력하라!</h3>
+<hr />
+<script>
+  let password = "";
+
+  do {
+    password = prompt("암호를 대라");
+
+    if (password == "you") {
+      break;
+    }
+  } while (true);
+
+  document.write("통과!");
+</script>
+
+<script>
+    // 1~100까지 숫자 중 랜덤하게 선택된 숫자 찾기
+    let answer = Math.floor(Math.random() * 101);
+
+    let guess = 0;
+
+    while (true) {
+      guess = prompt("정답을 추측해보세요");
+      guess = parseInt(guess);
+
+      if (guess > answer) {
+        alert("다운");
+      } else if (guess < answer) {
+        alert("업");
+      } else {
+        break;
+      }
+    }
+
+    document.write("숫자는 " + answer + "입니다.<br>");
+    document.write("정답입니다!");
+  </script>
+
+<script>
+    let coffee = 10;
+    let money = 0;
+
+    while (true) {
+      money = parseInt(prompt("돈을 넣어주세요(남은커피:" + coffee + ")"));
+
+      if (money == 300) {
+        // 300원을 넣은 경우
+        coffee = coffee - 1;
+        alert("커피를 줍니다.");
+      } else if (money > 300) {
+        // 300원 이상 넣은 경우
+        coffee = coffee - 1;
+        alert(
+          "거스름돈" +
+            (money - 300) +
+            "원과 커피를 줍니다.(남은커피:" +
+            coffee +
+            ")"
+        );
+      } else {
+        // 300원 보다 적은 돈을 넣은 경우
+        alert("돈이 부족합니다.");
+      }
+
+      // 커피가 없는 경우
+      if (coffee == 0) {
+        alert("커피가 다 떨어졌습니다. 판매를 중지합니다.");
+        break;
+      }
+    }
+  </script>
