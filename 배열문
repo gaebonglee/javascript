@@ -1,0 +1,251 @@
+<script>
+  // 빈 배열 생성
+  let degrees = [];
+
+  // 배열에 데이터 추가
+  degrees[0] = 15.1;
+  degrees[1] = 15.4;
+  degrees[2] = 16.1;
+  degrees[3] = 17.5;
+  degrees[4] = 19.2;
+  degrees[5] = 21.4;
+
+  let sum = 0;
+
+  for (let i = 0; i < degrees.length; i++) {
+    sum += degrees[i]; // 온도의 합
+  }
+
+  document.write("평균 온도는 " + sum / degrees.length + "<br>");
+</script>
+
+<script>
+  // 빈 배열 생성
+  let money = [];
+
+  // 배열에 데이터 추가
+  money[0] = 5000;
+  money[1] = 10000;
+  money[2] = 30000;
+
+  let sum = 0;
+
+  for (let i = 0; i < money.length; i++) {
+    sum += money[i]; // 45000
+  }
+
+  document.write("배열 money 출력 : " + money + "<br>");
+  document.write("배열 money 합계 : " + sum);
+</script>
+
+<script>
+  let size;
+  let numbers = [20, 5, 8, 15, 20];
+
+  document.write("let numbers = [20, 5, 8, 15, 20]<br>");
+
+  // 별 출력
+  for (let i = 0; i < numbers.length; i++) {
+    // numbers 배열의 i번째 값을 찾아서 size에 저장
+    size = numbers[i]; // numbers[0] : 20, numbers[1] : 5 ... numbers[4] : 20
+
+    // size의 값이 0 이상인 경우 반복
+    while (size > 0) {
+      document.write("*");
+      size--; // 20 -> 19 -> 18
+    }
+
+    document.write(numbers[i] + "<br>"); // i = 0, i = 1
+  }
+</script>
+
+<script>
+  let score = [];
+  let sum = 0;
+  let average = 0;
+
+  /*
+  score[0] = Math.floor(Math.random() * 101);
+  score[1] = Math.floor(Math.random() * 101);
+  score[2] = Math.floor(Math.random() * 101);
+  score[3] = Math.floor(Math.random() * 101);
+  score[4] = Math.floor(Math.random() * 101);
+
+  for (let i = 0; i < score.length; i++) {
+    sum += score[i];
+  }
+  */
+
+  for (let i = 0; i < 5; i++) {
+    // score.length = 0
+    // 1~100까지의 랜덤한 숫자 5개 생성
+    score[i] = Math.floor(Math.random() * 101);
+
+    // 배열 데이터의 합 계산
+    sum += score[i];
+  }
+
+  // 평균 계산
+  average = sum / score.length; // score.length = 5
+
+  document.write("배열 score 출력<br>");
+  document.write(score + "<br>");
+  document.write("<hr>");
+  document.write("score 합계 출력<br>");
+  document.write(sum);
+  document.write("<hr>");
+  document.write("score 평균 출력<br>");
+  document.write(average);
+</script>
+
+<h3>라면을 만드는데 필요한 재료</h3>
+<hr />
+<script>
+  let itemlist = ["라면", "계란", "물", "파"];
+
+  document.write("<ul>");
+
+  for (let i = 0; i < itemlist.length; i++) {
+    document.write("<li>" + itemlist[i] + "</li>");
+  }
+
+  document.write("</ul>");
+</script>
+
+<h3>지원 결과</h3>
+<hr />
+<script>
+  // includes() 함수
+  // 배열의 원소가 특정 값을 포함하고 있는지를 검사
+  // 있으면 true, 없으면 false
+
+  let skills = ["HTML", "CSS", "Javascript", "React"];
+
+  if (skills.includes("Javascript") && skills.includes("React")) {
+    document.write("축하합니다. 합격!");
+  } else if (skills.includes("Javascript") || skills.includes("React")) {
+    document.write("예비");
+  } else {
+    document.write("탈락!");
+  }
+</script>
+
+<script>
+  let scores = [];
+  let score = 0;
+  let stuNum = 0;
+
+  for (let i = 0; i < 5; i++) {
+    score = parseInt(prompt("학생의 점수를 입력하세요"));
+    scores.push(score);
+  }
+
+  for (let j = 0; j < scores.length; j++) {
+    stuNum = stuNum + 1;
+
+    if (scores[j] >= 60) {
+      document.write(
+        stuNum + "번 학생 : " + scores[j] + "점, 합격입니다.<br>"
+      );
+    } else {
+      document.write(
+        stuNum + "번 학생 : " + scores[j] + "점, 불합격입니다.<br>"
+      );
+    }
+  }
+</script>
+
+<script>
+  let scores = [];
+
+  let score = 0;
+  let count = 0;
+  let max_score = 0;
+  let min_score = 100;
+  let total = 0;
+
+  while (count < 5) {
+    score = parseInt(prompt("점수 입력 : "));
+    scores.push(score); // [10, 5, 20]
+
+    //  최대값 저장
+    // max_score : 10
+    // score : 20
+    if (max_score < score) {
+      max_score = score; // max_score -> 20
+    }
+
+    // 최소값 저장
+    // min_score : 10
+    // score : 5
+    if (min_score > score) {
+      min_score = score; // min_score : 5
+    }
+
+    count += 1; // count : 5
+  }
+
+  document.write("입력한 점수 : ", scores);
+  document.write("<hr>");
+  document.write("최고 점수 : ", max_score);
+  document.write("<br>");
+  document.write("최저 점수 : ", min_score);
+  document.write("<hr>");
+
+  let maxIndex = scores.indexOf(max_score); // maxIndex = 3
+  let minIndex = scores.indexOf(min_score); // minIndex = 1
+
+  // 최고 점수, 최저 점수 제거
+  // scores -> [10, 20, 30]
+  scores.splice(maxIndex, 1);
+  scores.splice(minIndex, 1);
+
+  // 중복 제거
+  // let newArr = [];
+  // for (let i = 0; i < scores.length; i++) {
+  //   if (!newArr.includes(scores[i])) {
+  //     newArr.push(scores[i]);
+  //   }
+  // }
+
+  let sum = 0;
+
+  // scores -> [10, 20, 30]
+  for (let j = 0; j < scores.length; j++) {
+    sum += scores[j]; // sum = 60
+  }
+
+  document.write("합 : ", sum, "<br>");
+  document.write("평균 : ", sum / scores.length); // 20
+</script>
+
+<style>
+  body {
+    text-align: center;
+  }
+  span {
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<h1>로또 1등 당첨 번호</h1>
+<hr />
+<script>
+  let randNum;
+  let rotto = [];
+
+  while (rotto.length < 6) {
+    // 1~45까지의 랜덤 숫자 생성
+    randNum = Math.floor(Math.random() * 45) + 1;
+
+    // 로또 배열이 randNum을 포함하지 않는 경우
+    if (rotto.indexOf(randNum) == -1) {
+      // 로또 배열에 randNum 추가
+      rotto.push(randNum);
+    }
+  }
+  document.write("<span>" + rotto.join() + "</span>");
+</script>
