@@ -1,0 +1,103 @@
+<h3>eval()로 수식 계산</h3>
+<hr />
+
+<script>
+  let str = prompt("수식 입력");
+
+  // 입력된 문자열이 없는 경우
+  if (str == "") {
+    document.write("입력된 식이 없습니다.");
+  }
+  // 입력된 문자열이 있는 경우
+  else {
+    let res = eval(str);
+    document.write(str + " = " + res);
+  }
+</script>
+
+<script>
+  let price_tshirt = 10000;
+  let price_sweater = 30000;
+  let total_price = 0;
+
+  let num_tshirt = parseInt(prompt("티셔츠 개수 입력 : "));
+  let num_sweater = parseInt(prompt("스웨터 개수 입력 : "));
+
+  total_price = price_tshirt * num_tshirt + price_sweater * num_sweater;
+
+  if (total_price <= 100000) {
+    total_price = total_price * 0.95;
+  } else {
+    total_price = total_price * 0.85;
+  }
+
+  document.write("티셔츠 개수 : ", num_tshirt, "<br>");
+  document.write("스웨터 개수 : ", num_sweater, "<br>");
+  document.write("합계 : ", total_price, "원");
+</script>
+
+<script>
+  let password = prompt("비밀번호를 입력하세요");
+  let safety = "";
+
+  if (password.length >= 9) {
+    safety = "Good";
+  } else if (9 > password.length && password.length >= 5) {
+    safety = "Normal";
+  } else {
+    safety = "Bad";
+  }
+
+  document.write("당신의 비밀번호 : " + password + "<br>");
+  document.write("비밀번호의 안전성은 " + safety + "입니다.");
+</script>
+
+<script>
+  //4번  형변환 안하면 결과 제대로 안나올 수 있음 -> 문자열 비교
+  let num1 = parseInt(prompt("첫 번째 숫자를 입력하세요"));
+  let num2 = parseInt(prompt("두 번째 숫자를 입력하세요"));
+
+  document.write("첫 번째 입력한 숫자 : ", num1, "<br>");
+  document.write("두 번째 입력한 숫자 : ", num2, "<br>");
+
+  // 첫 번째 숫자 > 두 번째 숫자
+  if (num1 > num2) {
+    if (num1 % 2 == 0) {
+      document.write(num1, "이 큰 수이고, 짝수이다.");
+    } else {
+      document.write(num1, "이 큰 수이고, 홀수이다.");
+    }
+  }
+  // 두 번째 숫자 > 첫 번째 숫자
+  else {
+    if (num2 % 2 == 0) {
+      document.write(num2, "이 큰 수이고, 짝수이다.");
+    } else {
+      document.write(num2, "이 큰 수이고, 홀수이다.");
+    }
+  }
+</script>
+
+<h3>월화수목금토일</h3>
+<hr />
+<script>
+  let day = prompt("월화수목금토일 중에서 입력하세요");
+
+  if (day == "") {
+    alert("잘못입력하였음");
+  } else {
+    switch (day) {
+      case "월":
+      case "화":
+      case "수":
+      case "목":
+      case "금":
+        document.write(day + "는 출근");
+        break;
+      case "토":
+      case "일":
+        document.write(day + "는 휴일");
+        break;
+    }
+  }
+</script>
