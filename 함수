@@ -1,0 +1,94 @@
+<!--1번-->
+<script>
+  function big(a, b) {
+    if (a > b) return a;
+    else return b;
+  }
+
+  const b = big("625", "555");
+  document.write("큰수= " + b);
+</script>
+
+<!--2번-->
+<script>
+  function pr(str, n) {
+    for (let i = 0; i < n; i++) {
+      document.write(str);
+    }
+  }
+</script>
+
+<!--3번-->
+<script>
+  const n = parseInt(prompt("정수를 입력하세요"));
+
+  evenOrOdd(n);
+
+  function evenOrOdd(number) {
+    const even = "짝수";
+    const odd = "홀수";
+  }
+
+  const result = number % 2 == 1 ? odd : even;
+
+  document.write("<h1>입력한 값 : " + number + "</h1>");
+  document.write("<h1>" + result + "</h1>");
+</script>
+
+<!--4번-->
+<script>
+  function = randomInt() {
+      return Math.floor(Math.random() * 9) + 1;
+    }
+
+
+        result = num1 * num2
+
+        if (isNaN(m) || m < 1 || m > 9)
+  document.write("정답! " + num1 + "*" + num2 + result + "입니다.")
+  document.write("아니오! " + num1 + "*" + num2 + result + "입니다.")
+</script>
+
+<!--5번-->
+<script>
+    const names = ["Ian", "David", "Darren", "peter"]
+    /*
+    //(1)배열의 각 이름출력
+    function printName(array) {
+
+    }*/
+    const printName =  (array) => {
+      for (let i = 0; i < array.length )
+    }
+    document.write("<h3>이름 출력</h3><hr/>");
+
+    /*(2)배열에서 가장 긴 이름 출력*/
+    const printLongName = (array) => {
+    let longest = name[0];
+
+    for (let i = 1; i < names.lenght; i++) {
+      if (names [i].lenght > longest.lenght) {
+        longest = names[i];
+      }
+    }
+    document.write(longest); //Darren
+  }
+  document.write("<h3>길이가 긴 이름 출력</h3><hr/>")
+  printLongName(names);
+</script>
+
+<!--6번-->
+<script>
+  const printStar = (n) => {
+    if (isNaN(n) || n < 1) {
+      document.write("입력 오류 입니다.<br>")
+      return;
+    }
+    for (let i = 1; i <= n; i++){
+      for (let j = 0; j < i; j++) {
+        document.write("*");
+      }
+    }document.write("<br>")
+  }
+  const
+</script>
